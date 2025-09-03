@@ -1,8 +1,5 @@
 package com.dohms.model;
 
-import org.hibernate.annotations.IdGeneratorType;
-import org.springframework.boot.autoconfigure.web.WebProperties.Resources.Chain.Strategy;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,16 +11,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "equipamentos")
+@Table(name = "equipamento")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Equipamento {
+public class EquipamentoModel {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int idEquipamento;
 	
 	@Column(name = "patrimonio")
 	private String patrimonio;
@@ -38,7 +35,7 @@ public class Equipamento {
 	private String local;
 	
 	@Column(name = "usuarioAtual")
-	private Usuario usuarioAtual;
+	private UsuarioModel usuarioAtual;
 	
 	
 	
